@@ -2,6 +2,7 @@ package com.learnwithsajib.addressbookretrofit.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 object RetrofitClient {
 
@@ -10,4 +11,7 @@ object RetrofitClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+
+
+    val service= retrofit.create(UserService::class.java)
 }
